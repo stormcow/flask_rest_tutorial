@@ -1,0 +1,24 @@
+<!-- templates/home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>REST API</title>
+  </head>
+  <body>
+    <h1>Welcome!</h1>
+    <ul>
+      {% for person in people %}
+      <li>{{ person.fname }} {{ person.lname }}</li>
+      <ul>
+        {% for note in person.notes %}
+        <li>
+          {{ note.content }}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
